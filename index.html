@@ -13,9 +13,9 @@
 
         body {
             background: 
-                radial-gradient(ellipse at top center, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 20% 80%, rgba(201, 169, 97, 0.04) 0%, transparent 40%),
-                radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 30%),
+                radial-gradient(ellipse at top center, rgba(201, 169, 97, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(201, 169, 97, 0.08) 0%, transparent 40%),
+                radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 30%),
                 linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 20%, #000000 100%);
             color: #f5f5f5;
             font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
@@ -34,8 +34,8 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(201, 169, 97, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+                radial-gradient(circle at 20% 80%, rgba(201, 169, 97, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
             animation: subtleMeshMove 30s ease-in-out infinite;
             pointer-events: none;
             z-index: -1;
@@ -165,6 +165,28 @@
             100% {
                 background-position: 100% 50%;
             }
+        }
+
+        /* Hero image styling */
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin: 4rem auto;
+            display: block;
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(201, 169, 97, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .hero-image:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 
+                0 35px 70px rgba(0, 0, 0, 0.9),
+                0 0 60px rgba(201, 169, 97, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
         }
 
         .glow-text {
@@ -683,7 +705,7 @@
 
         <div class="section">
             <div class="content-section">
-                <h2 class="section-title">How It Works</h2>
+                <h2 class="section-title">It Works Automagically</h2>
                 <p class="section-content">
                     Imagine asking someone to search for <em>anything on their phone</em>. A person. A place. A thing. And <em>without ever touching their device afterward</em>, you instantly reveal their thoughts.<br><br>
                     There are no suspicious moves, downloads, or device connections. Just clean, elegant deception — powered by GHOST.
@@ -724,6 +746,8 @@
             </div>
         </div>
 
+        <div style="margin: 6rem 0;"></div>
+
         <div class="section">
             <div class="cta-section">
                 <h2 class="section-title">Ready to Perform It?</h2>
@@ -744,7 +768,7 @@
         </div>
 
         <div class="section">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem; color: #c9a961;">Here are some of the things you can do with GHOST</h2>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Some effects you can do with <span class="glow-text">GHOST</span></h2>
         </div>
 
         <div class="section">
@@ -791,6 +815,10 @@
             </div>
         </div>
     </div>
+
+    <footer style="text-align: center; padding: 4rem 2rem 2rem; color: #666; font-size: 0.9rem;">
+        Copyright © 2025 Mobley Productions | Ghost
+    </footer>
 
     <script>
         // Enhanced dark particle system
