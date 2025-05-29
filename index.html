@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GHOST - Mentalism Magic</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>
         html {
             background: #000000 !important;
@@ -544,6 +545,11 @@
                 0 0 40px rgba(201, 169, 97, 0.5);
         }
 
+        .buy-now-btn-wrapper {
+            opacity: 0;
+            animation: fadeInUp 2s ease-out 2.5s forwards;
+        }
+
         /* Dark floating particles */
         .particle {
             position: fixed;
@@ -650,7 +656,7 @@
             GHOST is the cleanest mentalism you'll ever perform and it's always with you.
         </p>
 
-        <a href="#" class="buy-now-btn">Get Instant Access</a>
+        <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium" class="buy-now-btn-wrapper"></div>
 
         <div style="margin: 6rem 0;"></div>
 
@@ -705,7 +711,7 @@
                     There are no suspicious moves, downloads, or device connections. Just clean, elegant deception — powered by GHOST.
                 </p>
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="#" class="cta-button">Get Instant Access</a>
+                    <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div>
                 </div>
             </div>
         </div>
@@ -752,7 +758,7 @@
                 <p class="section-content" style="color: #e0e0e0;">
                     This isn't another trick — it's an impossible moment they'll never forget. Start performing <strong>GHOST</strong> and experience reactions like you've never seen.
                 </p>
-                <a href="#" class="cta-button">Get Instant Access</a>
+                <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div>
             </div>
         </div>
 
@@ -809,11 +815,8 @@
 
         <div class="section">
             <div class="email-signup">
-                <h3 style="color: #c9a961; margin-bottom: 2rem; font-size: 1.6rem; font-weight: 700;">Stay Updated</h3>
-                <form class="email-form" action="#" method="post">
-                    <input type="email" class="email-input" placeholder="Enter your email" required>
-                    <button type="submit" class="submit-btn">Join</button>
-                </form>
+                <h3 style="color: #c9a961; margin-bottom: 2rem; font-size: 1.6rem; font-weight: 700;">Get Early Access</h3>
+                <div style="width:100%;height:500px;" data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
             </div>
         </div>
     </div>
@@ -822,6 +825,7 @@
         Copyright © 2025 Mobley Productions | GHOST
     </footer>
 
+    <script src="https://server.fillout.com/embed/v1/"></script>
     <script>
         // Enhanced dark particle system
         function createParticle() {
@@ -893,56 +897,12 @@
         window.addEventListener('scroll', throttle(handleParallax, 16));
         window.addEventListener('load', handleScrollAnimations);
 
-        // Form submission with dark theme feedback
-        document.querySelector('.email-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('.email-input').value;
-            if (email) {
-                const submitBtn = this.querySelector('.submit-btn');
-                submitBtn.style.background = 'linear-gradient(45deg, #10b981, #059669)';
-                submitBtn.textContent = 'Joined!';
-                setTimeout(() => {
-                    submitBtn.style.background = 'linear-gradient(45deg, #c9a961, #ddbf73)';
-                    submitBtn.textContent = 'Join';
-                    this.querySelector('.email-input').value = '';
-                }, 2000);
-            }
-        });
+        // Form submission with dark theme feedback - now handled by Fillout
+        // Removed old form handling since we're using Fillout embed
 
         // Enhanced button interactions with ripple effect
         document.addEventListener('click', function(e) {
-            if (e.target.classList.contains('cta-button') || e.target.classList.contains('buy-now-btn')) {
-                e.preventDefault();
-                
-                // Add dark ripple effect
-                const button = e.target;
-                const ripple = document.createElement('span');
-                const rect = button.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.cssText = `
-                    position: absolute;
-                    width: ${size}px;
-                    height: ${size}px;
-                    left: ${x}px;
-                    top: ${y}px;
-                    background: rgba(0, 0, 0, 0.3);
-                    border-radius: 50%;
-                    transform: scale(0);
-                    animation: ripple 0.6s ease-out;
-                    pointer-events: none;
-                `;
-                
-                button.style.position = 'relative';
-                button.style.overflow = 'hidden';
-                button.appendChild(ripple);
-                
-                setTimeout(() => ripple.remove(), 600);
-                
-                alert('Coming soon! GHOST will be available shortly.');
-            }
+            // Removed the alert functionality since we're now using Fillout forms
         });
 
         // Add ripple animation
