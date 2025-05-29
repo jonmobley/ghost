@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GHOST - Mentalism Magic</title>
     <style>
+        html {
+            background: #000000 !important;
+            min-height: 100%;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -17,6 +22,7 @@
                 radial-gradient(ellipse at 20% 80%, rgba(201, 169, 97, 0.08) 0%, transparent 40%),
                 radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 30%),
                 linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 20%, #000000 100%);
+            background-color: #000000 !important;
             color: #f5f5f5;
             font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
             line-height: 1.6;
@@ -580,19 +586,24 @@
 
         /* Mobile optimizations */
         @media (max-width: 768px) {
+            html {
+                background: #000000 !important;
+            }
+            
             body {
-                background: 
+                background: #000000 !important;
+                background-image: 
                     radial-gradient(ellipse at top center, rgba(201, 169, 97, 0.15) 0%, transparent 50%),
                     radial-gradient(ellipse at 20% 80%, rgba(201, 169, 97, 0.08) 0%, transparent 40%),
                     radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 30%),
                     linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 20%, #000000 100%) !important;
-                min-height: 100vh;
+                min-height: 100vh !important;
                 color: #f5f5f5 !important;
             }
             
             .container {
                 padding: 60px 15px;
-                background: transparent;
+                background: transparent !important;
             }
             
             .content-section {
