@@ -100,24 +100,19 @@
         }
 
         .ghost-letter:nth-child(1) {
-            transform: translateY(-10px);
-            animation: letterFadeIn 0.8s ease-out 1.5s forwards, floatSlow1 12s ease-in-out infinite 2.3s;
+            animation: letterFadeIn 0.6s ease-out 0.8s forwards, shimmer 4s ease-in-out infinite alternate, floatSlow1 12s ease-in-out infinite 0.8s;
         }
         .ghost-letter:nth-child(2) {
-            transform: translateY(15px);
-            animation: letterFadeIn 0.8s ease-out 2.0s forwards, floatSlow2 14s ease-in-out infinite 2.8s;
+            animation: letterFadeIn 0.6s ease-out 1.0s forwards, shimmer 4s ease-in-out infinite alternate, floatSlow2 14s ease-in-out infinite 1.0s;
         }
         .ghost-letter:nth-child(3) {
-            transform: translateY(-5px);
-            animation: letterFadeIn 0.8s ease-out 2.5s forwards, floatSlow3 16s ease-in-out infinite 3.3s;
+            animation: letterFadeIn 0.6s ease-out 1.2s forwards, shimmer 4s ease-in-out infinite alternate, floatSlow3 16s ease-in-out infinite 1.2s;
         }
         .ghost-letter:nth-child(4) {
-            transform: translateY(8px);
-            animation: letterFadeIn 0.8s ease-out 3.0s forwards, floatSlow4 13s ease-in-out infinite 3.8s;
+            animation: letterFadeIn 0.6s ease-out 1.4s forwards, shimmer 4s ease-in-out infinite alternate, floatSlow4 13s ease-in-out infinite 1.4s;
         }
         .ghost-letter:nth-child(5) {
-            transform: translateY(-12px);
-            animation: letterFadeIn 0.8s ease-out 3.5s forwards, floatSlow5 15s ease-in-out infinite 4.3s;
+            animation: letterFadeIn 0.6s ease-out 1.6s forwards, shimmer 4s ease-in-out infinite alternate, floatSlow5 15s ease-in-out infinite 1.6s;
         }
 
         @keyframes letterFadeIn {
@@ -723,7 +718,7 @@
 <body>
     <div class="container">
         <div class="mobile-icon-container">
-            <img src="images/ghost-app-icon.png" alt="GHOST App Icon" class="ghost-app-icon" style="width: 160px; height: 160px; margin: 3rem auto 3rem auto; display: block; border-radius: 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 30px rgba(201, 169, 97, 0.3); opacity: 0; animation: fadeInUp 1s ease-out 0.5s forwards;">
+            <img src="images/ghost-app-icon.png" alt="GHOST App Icon" class="ghost-app-icon" style="width: 160px; height: 160px; margin: 3rem auto 3rem auto; display: block; border-radius: 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 30px rgba(201, 169, 97, 0.3); opacity: 0; animation: fadeInUp 0.8s ease-out 0.2s forwards;">
             
             <div class="ghost-title">
                 <span class="ghost-letter">G</span>
@@ -743,7 +738,7 @@
 
         <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium" class="buy-now-btn-wrapper"></div>
         
-        <p class="mobile-scroll-text" style="display: none; font-style: italic; color: #c9a961; margin-top: 1rem; font-size: 0.9rem;">... or scroll to learn more</p>
+        <p class="mobile-scroll-text" style="display: none; font-style: italic; color: #c9a961; margin-top: 1rem; font-size: 0.9rem; opacity: 0; transform: translateX(-30px); animation: slideInFromLeft 0.8s ease-out 3.8s forwards;">... or scroll to learn more</p>
 
         <div style="margin: 6rem 0;"></div>
 
@@ -766,7 +761,7 @@
             <div class="testimonial-author">Alex V., Professional Magician</div>
         </div>
         <div class="section">
-            <div class="testimonial-quote">"That moment when they look at their phone then stare at you like you just broke the universe? That's GHOST."</div>
+            <div class="testimonial-quote">"That moment when they look at their phone then stare at you like you just broke the universe? That's <span class="ghost-text">GHOST</span>."</div>
             <div class="testimonial-author">Shawn E., Mentalist</div>
         </div>
         <div class="section">
@@ -776,7 +771,7 @@
 
         <div class="section">
             <div class="content-section">
-                <h2 class="section-title">What Is <span class="ghost-text">GHOST</span>?</h2>
+                <h2 class="section-title"><span class="ghost-text">GHOST</span> is Automatic</h2>
                 <p class="section-content">
                     <strong>Ghost is a secret, private webpage disguised as the world's #1 search engine.</strong><br>
                     Everything is hidden in plain sight and vanishes without a trace. Behind the scenes, it gives you the power to seemingly predict or reveal <em>anything</em> your spectator is thinking - live.
@@ -808,7 +803,7 @@
         </div>
 
         <div class="section">
-            <div class="testimonial-quote">"The best tricks are the ones that feel normal until they don't. GHOST lives there."</div>
+            <div class="testimonial-quote">"The best tricks are the ones that feel normal until they don't. <span class="ghost-text">GHOST</span> lives there."</div>
             <div class="testimonial-author">Close-Up Magician</div>
         </div>
         <div class="section">
