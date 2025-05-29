@@ -639,22 +639,44 @@
             }
             
             .subtitle {
-                font-size: 1.2rem;
+                font-size: 1rem;
+            }
+            
+            .ghost-app-icon {
+                width: 100px !important;
+                height: 100px !important;
+                border-radius: 20px !important;
+                display: block !important;
+                margin: 2rem auto 3rem auto !important;
+            }
+            
+            .desktop-icon {
+                display: none !important;
+            }
+            
+            .mobile-icon-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="ghost-title">
-            <span class="ghost-letter">G</span>
-            <span class="ghost-letter">H</span>
-            <span class="ghost-letter">O</span>
-            <span class="ghost-letter">S</span>
-            <span class="ghost-letter">T</span>
+        <div class="mobile-icon-container">
+            <img src="images/ghost-app-icon.png" alt="GHOST App Icon" class="ghost-app-icon" style="width: 160px; height: 160px; margin: 3rem auto 3rem auto; display: none; border-radius: 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 30px rgba(201, 169, 97, 0.3);">
+            
+            <div class="ghost-title">
+                <span class="ghost-letter">G</span>
+                <span class="ghost-letter">H</span>
+                <span class="ghost-letter">O</span>
+                <span class="ghost-letter">S</span>
+                <span class="ghost-letter">T</span>
+            </div>
         </div>
         
-        <img src="images/ghost-app-icon.png" alt="GHOST App Icon" style="width: 160px; height: 160px; margin: 3rem auto 3rem auto; display: block; border-radius: 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 30px rgba(201, 169, 97, 0.3);">
+        <img src="images/ghost-app-icon.png" alt="GHOST App Icon" class="desktop-icon" style="width: 160px; height: 160px; margin: 3rem auto 3rem auto; display: block; border-radius: 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 30px rgba(201, 169, 97, 0.3);">
         
         <p class="subtitle">
             Some tricks get polite applause.<br>
