@@ -653,11 +653,7 @@
                 height: 100px !important;
                 border-radius: 20px !important;
                 display: block !important;
-                margin: 2rem auto 3rem auto !important;
-            }
-            
-            .desktop-icon {
-                display: none !important;
+                margin: 1rem auto 2rem auto !important;
             }
             
             .mobile-icon-container {
@@ -669,13 +665,25 @@
             .content-section {
                 text-align: center;
             }
+            
+            body {
+                background: 
+                    radial-gradient(ellipse at top center, rgba(201, 169, 97, 0.3) 0%, transparent 50%),
+                    radial-gradient(ellipse at 20% 80%, rgba(201, 169, 97, 0.15) 0%, transparent 40%),
+                    radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 30%),
+                    linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 20%, #000000 100%) !important;
+            }
+            
+            .mobile-scroll-text {
+                display: block !important;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="mobile-icon-container">
-            <img src="images/ghost-app-icon.png" alt="GHOST App Icon" class="ghost-app-icon" style="width: 160px; height: 160px; margin: 3rem auto 3rem auto; display: none; border-radius: 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 30px rgba(201, 169, 97, 0.3);">
+            <img src="images/ghost-app-icon.png" alt="GHOST App Icon" class="ghost-app-icon" style="width: 160px; height: 160px; margin: 3rem auto 3rem auto; display: block; border-radius: 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 30px rgba(201, 169, 97, 0.3);">
             
             <div class="ghost-title">
                 <span class="ghost-letter">G</span>
@@ -686,7 +694,6 @@
             </div>
         </div>
         
-        <img src="images/ghost-app-icon.png" alt="GHOST App Icon" class="desktop-icon" style="width: 160px; height: 160px; margin: 3rem auto 3rem auto; display: block; border-radius: 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7), 0 0 30px rgba(201, 169, 97, 0.3);">
         
         <p class="subtitle">
             Some tricks get polite applause.<br>
@@ -695,6 +702,8 @@
         </p>
 
         <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium" class="buy-now-btn-wrapper"></div>
+        
+        <p class="mobile-scroll-text" style="display: none; font-style: italic; color: #c9a961; margin-top: 1rem; font-size: 0.9rem;">... or scroll to learn more</p>
 
         <div style="margin: 6rem 0;"></div>
 
