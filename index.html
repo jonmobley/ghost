@@ -201,9 +201,9 @@
             color: #ffffff !important;
             font-weight: bold !important;
             text-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.3),
-                0 0 40px rgba(255, 255, 255, 0.1) !important;
-            filter: blur(0.3px);
+                0 0 20px rgba(255, 255, 255, 0.4),
+                0 0 40px rgba(255, 255, 255, 0.2),
+                0 0 60px rgba(255, 255, 255, 0.1) !important;
         }
 
         .subtitle {
@@ -299,24 +299,38 @@
         }
 
         .feature-list li {
-            padding: 0.8rem 0;
-            color: #d0d0d0;
-            font-size: 1rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-            justify-content: flex-start;
+            display: block;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border-left: 3px solid #c9a961;
             transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            display: block;
+            font-size: 1.8rem;
+            color: #c9a961;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(201, 169, 97, 0.5);
         }
 
         .feature-list li .feature-highlight {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
             color: #c9a961;
             font-weight: bold;
         }
 
         .feature-list li:hover {
             color: #ffffff;
-            transform: translateX(5px);
+            transform: translateY(-3px);
         }
 
         /* Enhanced testimonials with dark mystery */
@@ -563,6 +577,17 @@
         [data-fillout-embed-type="popup"] button {
             padding-left: 3rem !important;
             padding-right: 3rem !important;
+            white-space: nowrap !important;
+            font-size: 0.9rem !important;
+        }
+
+        @media (max-width: 768px) {
+            [data-fillout-embed-type="popup"] button {
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
+                font-size: 0.8rem !important;
+                white-space: nowrap !important;
+            }
         }
 
         /* Dark floating particles */
@@ -795,14 +820,14 @@
             <div class="content-section">
                 <h2 class="section-title"><span class="ghost-text">GHOST</span> is Automatic</h2>
                 <p class="section-content">
-                    <strong>Ghost is a secret, private webpage disguised as the world's #1 search engine.</strong><br>
+                    <strong>Ghost is a secret webpage disguised as the world's #1 search engine.</strong><br>
                     Everything is hidden in plain sight and vanishes without a trace. Behind the scenes, it gives you the power to seemingly predict or reveal <em>anything</em> your spectator is thinking - live.
                 </p>
                 <ul class="feature-list">
-                    <li><span class="feature-highlight">No setup required</span> - you're ready anywhere, anytime</li>
-                    <li><span class="feature-highlight">Works on any phone</span> – no downloads or special permissions</li>
-                    <li><span class="feature-highlight">Instant reset</span> – repeat it again and again</li>
-                    <li><span class="feature-highlight">Freakishly deceptive</span> – feels like real mind-reading</li>
+                    <li><span class="feature-highlight">No Setup Required</span> You're ready anywhere, anytime</li>
+                    <li><span class="feature-highlight">Works On Any iPhone</span> No downloads or special permissions</li>
+                    <li><span class="feature-highlight">Instant Reset</span> Repeat it again and again</li>
+                    <li><span class="feature-highlight">Freakishly Deceptive</span> It feels like real mind-reading</li>
                 </ul>
             </div>
         </div>
