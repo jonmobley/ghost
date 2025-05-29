@@ -550,6 +550,12 @@
             animation: fadeInUp 2s ease-out 2.5s forwards;
         }
 
+        /* Fillout button custom styling for more padding */
+        [data-fillout-embed-type="popup"] button {
+            padding-left: 3rem !important;
+            padding-right: 3rem !important;
+        }
+
         /* Dark floating particles */
         .particle {
             position: fixed;
@@ -659,6 +665,10 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .content-section {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -767,7 +777,7 @@
 
         <div class="section">
             <div class="content-section">
-                <h2 class="section-title">Who It's For</h2>
+                <h2 class="section-title">Who <span class="glow-text">GHOST</span> is for</h2>
                 <p class="section-content">GHOST is for anyone who wants to deliver huge reactions with minimal effort. It's built for modern performers who want maximum impact with minimal hassle at a moment's notice. Whether you're performing for:</p>
                 <ul class="feature-list">
                     <li><span class="feature-highlight">Walkaround gigs</span></li>
@@ -782,11 +792,11 @@
 
         <div class="section">
             <div class="cta-section">
-                <h2 class="section-title">Ready to Perform It?</h2>
+                <h2 class="section-title">Ready to use GHOST?</h2>
                 <p class="section-content" style="color: #e0e0e0;">
                     This isn't another trick — it's an impossible moment they'll never forget. Start performing <strong>GHOST</strong> and experience reactions like you've never seen.
                 </p>
-                <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div>
+                <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium" style="margin-top: 3rem;"></div>
             </div>
         </div>
 
