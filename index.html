@@ -190,8 +190,9 @@
         .glow-text {
             color: #ffffff;
             text-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.3),
-                0 0 40px rgba(255, 255, 255, 0.1);
+                0 0 20px rgba(255, 255, 255, 0.6),
+                0 0 40px rgba(255, 255, 255, 0.4),
+                0 0 60px rgba(255, 255, 255, 0.2);
             filter: blur(0.3px);
             font-weight: bold;
         }
@@ -201,9 +202,9 @@
             color: #ffffff !important;
             font-weight: bold !important;
             text-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.4),
-                0 0 40px rgba(255, 255, 255, 0.2),
-                0 0 60px rgba(255, 255, 255, 0.1) !important;
+                0 0 20px rgba(255, 255, 255, 0.6),
+                0 0 40px rgba(255, 255, 255, 0.4),
+                0 0 60px rgba(255, 255, 255, 0.2) !important;
         }
 
         .subtitle {
@@ -233,7 +234,7 @@
 
         /* Enhanced glassmorphism with dark theme */
         .content-section {
-            text-align: left;
+            text-align: center;
             background: linear-gradient(135deg, 
                 rgba(0, 0, 0, 0.5) 0%,
                 rgba(20, 20, 20, 0.3) 100%);
@@ -384,13 +385,13 @@
 
         .cta-button {
             display: inline-block;
-            padding: 18px 40px;
+            padding: 24px 50px;
             background: linear-gradient(45deg, #c9a961, #ddbf73);
             color: #000000;
             text-decoration: none;
             border-radius: 12px;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             position: relative;
             z-index: 2;
             margin-top: 2rem;
@@ -451,7 +452,7 @@
         }
 
         .trick-title {
-            font-size: 1.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 0.8rem;
             color: #c9a961;
@@ -541,16 +542,16 @@
             box-shadow: 0 10px 25px rgba(201, 169, 97, 0.4);
         }
 
-        /* Buy now button - same as CTA button */
+        /* Buy now button - same as CTA button but bigger */
         .buy-now-btn {
             display: inline-block;
-            padding: 18px 40px;
+            padding: 24px 50px;
             background: linear-gradient(45deg, #c9a961, #ddbf73);
             color: #000000;
             text-decoration: none;
             border-radius: 12px;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-top: 2rem;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             text-transform: uppercase;
@@ -573,19 +574,20 @@
             animation: fadeInUp 2s ease-out 2.5s forwards;
         }
 
-        /* Fillout button custom styling for more padding */
+        /* Fillout button custom styling for more padding and larger size */
         [data-fillout-embed-type="popup"] button {
-            padding-left: 3rem !important;
-            padding-right: 3rem !important;
+            padding: 24px 50px !important;
             white-space: nowrap !important;
-            font-size: 0.9rem !important;
+            font-size: 1.1rem !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
         }
 
         @media (max-width: 768px) {
             [data-fillout-embed-type="popup"] button {
-                padding-left: 1.5rem !important;
-                padding-right: 1.5rem !important;
-                font-size: 0.8rem !important;
+                padding: 20px 40px !important;
+                font-size: 1rem !important;
                 white-space: nowrap !important;
             }
         }
@@ -656,6 +658,29 @@
         @media (max-width: 768px) {
             html {
                 background: #000000 !important;
+            }
+            
+            /* iPhone status bar area styling */
+            body {
+                padding-top: env(safe-area-inset-top);
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+            
+            /* Extend background to status bar */
+            html::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: env(safe-area-inset-top, 20px);
+                background: 
+                    radial-gradient(ellipse at top center, rgba(201, 169, 97, 0.15) 0%, transparent 50%),
+                    linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+                z-index: 9999;
+                pointer-events: none;
             }
             
             body {
@@ -868,8 +893,8 @@
 
         <div class="section">
             <div class="content-section">
-                <h2 class="section-title">Who <span class="glow-text">GHOST</span> is for</h2>
-                <p class="section-content">GHOST is for anyone who wants to deliver huge reactions with minimal effort. It's built for modern performers who want maximum impact with minimal hassle at a moment's notice. Whether you're performing for:</p>
+                <h2 class="section-title">Is <span class="ghost-text">GHOST</span> for you?</h2>
+                <p class="section-content"><span class="ghost-text">GHOST</span> is for anyone who wants to deliver huge reactions with minimal effort. It's built for modern performers who want maximum impact with minimal hassle at a moment's notice.</p>
                 <ul class="feature-list">
                     <li><span class="feature-highlight">Walkaround gigs</span></li>
                     <li><span class="feature-highlight">Stage Shows</span></li>
@@ -910,14 +935,6 @@
 
         <div class="section">
             <div class="trick">
-                <h2 class="trick-title">THE GIFT</h2>
-                <p class="trick-tagline">A memory from their childhood… drawn to life.</p>
-                <p class="trick-description">
-                    A spectator uses their own phone to search for gift they once adored as a child - it can be anything, but ideally something deeply personal or nostalgic. You ask them to set their phone aside or put it away, asking them to focus their thoughts on the gift and its memories. Then, to everyone's astonishment (and often yells of disbelief), you grab a pen and slowly draw the exact thing they are thinking.
-                </p>
-            </div>
-
-            <div class="trick">
                 <h2 class="trick-title">THE PREDICTION</h2>
                 <p class="trick-tagline">They make a free choice… But you already knew.</p>
                 <p class="trick-description">
@@ -938,6 +955,14 @@
                 <p class="trick-tagline">The moment they open their eyes… everything changes.</p>
                 <p class="trick-description">
                     They close their eyes and focus on a thought. A borrowed iPhone is raised toward their face. <em>"Did you know Face ID only works when your eyes are open? Now imagine you could use your eyes to communicate more than just who you are, but also what you are thinking."</em> You invite them to open their eyes, and suddenly the phone changes to showing images of what they are thinking.
+                </p>
+            </div>
+
+            <div class="trick">
+                <h2 class="trick-title">THE GIFT</h2>
+                <p class="trick-tagline">A memory from their childhood… drawn to life.</p>
+                <p class="trick-description">
+                    A spectator uses their own phone to search for gift they once adored as a child - it can be anything, but ideally something deeply personal or nostalgic. You ask them to set their phone aside or put it away, asking them to focus their thoughts on the gift and its memories. Then, to everyone's astonishment (and often yells of disbelief), you grab a pen and slowly draw the exact thing they are thinking.
                 </p>
             </div>
         </div>
