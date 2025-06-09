@@ -383,6 +383,110 @@
             50% { transform: scale(1.2); opacity: 0.6; }
         }
 
+        /* Custom Email Form Styling */
+        .email-signup {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.6) 0%,
+                rgba(20, 20, 20, 0.4) 100%);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .email-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 2rem auto 0;
+            flex-wrap: wrap;
+        }
+
+        .email-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 18px 24px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(201, 169, 97, 0.3);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            outline: none;
+        }
+
+        .email-input:focus {
+            border-color: rgba(201, 169, 97, 0.6);
+            background: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 25px rgba(201, 169, 97, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .email-input::placeholder {
+            color: #999;
+        }
+
+        .submit-btn {
+            padding: 18px 36px;
+            background: linear-gradient(45deg, #c9a961, #ddbf73);
+            border: 2px solid rgba(201, 169, 97, 0.4);
+            border-radius: 12px;
+            color: #000;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 160px;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background: linear-gradient(45deg, #ddbf73, #c9a961);
+            border-color: rgba(201, 169, 97, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(201, 169, 97, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Success/Error Messages */
+        .message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        .message.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .message.success {
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+        }
+
+        .message.error {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+
+        /* Main CTA Button */
         .cta-button {
             display: inline-block;
             padding: 24px 50px;
@@ -401,6 +505,8 @@
             box-shadow: 
                 0 10px 30px rgba(0, 0, 0, 0.5),
                 0 0 20px rgba(201, 169, 97, 0.3);
+            border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
@@ -409,6 +515,11 @@
             box-shadow: 
                 0 20px 50px rgba(0, 0, 0, 0.7),
                 0 0 40px rgba(201, 169, 97, 0.5);
+        }
+
+        .buy-now-btn-wrapper {
+            opacity: 0;
+            animation: fadeInUp 2s ease-out 2.5s forwards;
         }
 
         /* Dark trick cards */
@@ -474,122 +585,6 @@
             font-size: 1rem;
             line-height: 1.7;
             font-weight: 300;
-        }
-
-        /* Dark email signup */
-        .email-signup {
-            background: linear-gradient(135deg, 
-                rgba(0, 0, 0, 0.6) 0%,
-                rgba(20, 20, 20, 0.4) 100%);
-            border: 1px solid rgba(201, 169, 97, 0.2);
-            border-radius: 20px;
-            padding: 3rem;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        .email-form {
-            display: flex;
-            gap: 1rem;
-            max-width: 500px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-
-        .email-input {
-            flex: 1;
-            min-width: 300px;
-            padding: 15px 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border: 1px solid rgba(201, 169, 97, 0.3);
-            border-radius: 10px;
-            color: #fff;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .email-input:focus {
-            outline: none;
-            border-color: rgba(201, 169, 97, 0.6);
-            background: rgba(0, 0, 0, 0.9);
-            box-shadow: 0 0 20px rgba(201, 169, 97, 0.3);
-        }
-
-        .email-input::placeholder {
-            color: #999;
-        }
-
-        .submit-btn {
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #c9a961, #ddbf73);
-            border: 1px solid rgba(201, 169, 97, 0.4);
-            border-radius: 10px;
-            color: #000;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .submit-btn:hover {
-            background: linear-gradient(45deg, #ddbf73, #c9a961);
-            border-color: rgba(201, 169, 97, 0.6);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(201, 169, 97, 0.4);
-        }
-
-        /* Buy now button - same as CTA button but bigger */
-        .buy-now-btn {
-            display: inline-block;
-            padding: 24px 50px;
-            background: linear-gradient(45deg, #c9a961, #ddbf73);
-            color: #000000;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-top: 2rem;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 
-                0 10px 30px rgba(0, 0, 0, 0.5),
-                0 0 20px rgba(201, 169, 97, 0.3);
-        }
-
-        .buy-now-btn:hover {
-            background: linear-gradient(45deg, #ddbf73, #c9a961);
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 
-                0 20px 50px rgba(0, 0, 0, 0.7),
-                0 0 40px rgba(201, 169, 97, 0.5);
-        }
-
-        .buy-now-btn-wrapper {
-            opacity: 0;
-            animation: fadeInUp 2s ease-out 2.5s forwards;
-        }
-
-        /* Fillout button custom styling for more padding and larger size */
-        [data-fillout-embed-type="popup"] button {
-            padding: 24px 50px !important;
-            white-space: nowrap !important;
-            font-size: 1.1rem !important;
-            font-weight: 700 !important;
-            text-transform: uppercase !important;
-            letter-spacing: 1px !important;
-        }
-
-        @media (max-width: 768px) {
-            [data-fillout-embed-type="popup"] button {
-                padding: 20px 40px !important;
-                font-size: 1rem !important;
-                white-space: nowrap !important;
-            }
         }
 
         /* Dark floating particles */
@@ -808,7 +803,9 @@
             GHOST is the cleanest mentalism you'll ever perform and it's always with you.
         </p>
 
-        <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium" class="buy-now-btn-wrapper"></div>
+        <div class="buy-now-btn-wrapper">
+            <button class="cta-button" onclick="showEmailForm('main-cta')">GET EARLY ACCESS</button>
+        </div>
         
         <p class="mobile-scroll-text" style="font-style: italic; color: #c9a961; margin-top: 1rem; font-size: 0.9rem; opacity: 0; transform: translateX(-30px); animation: slideInFromLeft 0.8s ease-out 4.0s forwards;">... or scroll to learn more</p>
 
@@ -865,7 +862,7 @@
                     There are no suspicious moves, downloads, or device connections. Just clean, elegant deception — powered by <span class="ghost-text">GHOST</span>.
                 </p>
                 <div style="text-align: center; margin-top: 2rem;">
-                    <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium"></div>
+                    <button class="cta-button" onclick="showEmailForm('secondary-cta')">GET EARLY ACCESS</button>
                 </div>
             </div>
         </div>
@@ -906,7 +903,7 @@
             </div>
         </div>
 
-        <div style="margin: 6rem 0;"></div>
+        <div style="margin: 8rem 0;"></div>
 
         <div class="section">
             <div class="cta-section">
@@ -914,7 +911,7 @@
                 <p class="section-content">
                     This isn't another trick — it's an impossible moment they'll never forget. Start performing <strong><span class="ghost-text">GHOST</span></strong> and experience reactions like you've never seen.
                 </p>
-                <div data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="popup" data-fillout-button-text="GET EARLY ACCESS" data-fillout-button-color="#c9a961" data-fillout-button-size="large" data-fillout-inherit-parameters data-fillout-popup-size="medium" style="margin-top: 3rem;"></div>
+                <button class="cta-button" onclick="showEmailForm('final-cta')" style="margin-top: 3rem;">GET EARLY ACCESS</button>
             </div>
         </div>
 
@@ -972,8 +969,23 @@
 
         <div class="section">
             <div class="email-signup">
-                <h3 style="color: #c9a961; margin-bottom: 2rem; font-size: 1.6rem; font-weight: 700;">Get Early Access</h3>
-                <div style="width:100%;height:500px;" data-fillout-id="bezVU1hHHYus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+                <h3 style="color: #c9a961; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Join the Early Access List</h3>
+                <p style="color: #d0d0d0; margin-bottom: 2rem;">Be the first to know when GHOST launches and get exclusive performer insights.</p>
+                
+                <form class="email-form" id="emailForm">
+                    <input 
+                        type="email" 
+                        class="email-input" 
+                        id="emailInput"
+                        placeholder="Enter your email address" 
+                        required
+                    >
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Get Access
+                    </button>
+                </form>
+                
+                <div id="message" class="message"></div>
             </div>
         </div>
     </div>
@@ -982,8 +994,113 @@
         Copyright © 2025 Mobley Productions | <span class="ghost-text">GHOST</span>
     </footer>
 
-    <script src="https://server.fillout.com/embed/v1/"></script>
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
     <script>
+        // Initialize Supabase
+        const SUPABASE_URL = 'https://lnkxevqybrfnjydhwkkz.supabase.co'
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxua3hldnF5YnJmbmp5ZGh3a2t6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNzEzODYsImV4cCI6MjA2Mzg0NzM4Nn0.OU3J6zDkxVgewIQGNDZycIKGtHj03vttUhrvhgaJ5a8'
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+
+        // Email form handler
+        document.getElementById('emailForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const emailInput = document.getElementById('emailInput');
+            const submitBtn = document.getElementById('submitBtn');
+            const message = document.getElementById('message');
+            const email = emailInput.value.trim();
+            
+            if (!email) {
+                showMessage('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            // Disable form while submitting
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            try {
+                // Insert email into Supabase early access table
+                const { data, error } = await supabase
+                    .from('ghost_early_access') // Separate table from your main product purchases
+                    .insert([
+                        { 
+                            email: email,
+                            source: 'landing_page',
+                            signup_date: new Date().toISOString(),
+                            status: 'pending',
+                            referrer: document.referrer || 'direct'
+                        }
+                    ])
+                
+                if (error) {
+                    // Check if it's a duplicate email error
+                    if (error.code === '23505') {
+                        showMessage('You\'re already on the list! We\'ll be in touch soon.', 'success');
+                    } else {
+                        throw error;
+                    }
+                } else {
+                    // Success - send welcome email via your backend
+                    await sendWelcomeEmail(email);
+                    showMessage('Success! You\'re on the early access list. Check your email for confirmation.', 'success');
+                    emailInput.value = '';
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showMessage('Something went wrong. Please try again.', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Get Access';
+            }
+        });
+
+        // Function to send welcome email via Netlify function
+        async function sendWelcomeEmail(email) {
+            try {
+                await fetch('/.netlify/functions/send-welcome-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email })
+                });
+            } catch (error) {
+                console.error('Error sending welcome email:', error);
+                // Don't throw here - the signup was successful even if email fails
+            }
+        }
+
+        // Show email form popup (for CTA buttons)
+        function showEmailForm(source) {
+            // Scroll to the email form
+            document.querySelector('.email-signup').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+            
+            // Focus on email input after scroll
+            setTimeout(() => {
+                document.getElementById('emailInput').focus();
+            }, 800);
+        }
+
+        // Show message function
+        function showMessage(text, type) {
+            const message = document.getElementById('message');
+            message.textContent = text;
+            message.className = `message ${type}`;
+            message.classList.add('show');
+            
+            // Hide after 5 seconds
+            setTimeout(() => {
+                message.classList.remove('show');
+            }, 5000);
+        }
+
         // Enhanced dark particle system
         function createParticle() {
             const particle = document.createElement('div');
@@ -1054,12 +1171,34 @@
         window.addEventListener('scroll', throttle(handleParallax, 16));
         window.addEventListener('load', handleScrollAnimations);
 
-        // Form submission with dark theme feedback - now handled by Fillout
-        // Removed old form handling since we're using Fillout embed
-
         // Enhanced button interactions with ripple effect
         document.addEventListener('click', function(e) {
-            // Removed the alert functionality since we're now using Fillout forms
+            if (e.target.classList.contains('cta-button') || e.target.classList.contains('submit-btn')) {
+                const button = e.target;
+                const ripple = document.createElement('span');
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.pointerEvents = 'none';
+                
+                button.style.position = 'relative';
+                button.style.overflow = 'hidden';
+                button.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            }
         });
 
         // Add ripple animation
