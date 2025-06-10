@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     const { data, error } = await resend.emails.send({
       from: 'GHOST <magic@ghost.watch>', // Your verified domain
       to: [email],
-      subject: 'Welcome to the GHOST Early Access List 👻',
+      subject: 'Welcome to the GHOST Early Access List',
       html: `
         <!DOCTYPE html>
         <html lang="en">
@@ -103,35 +103,31 @@ export default async function handler(req, res) {
         <body>
           <div class="container">
             <div class="logo">GHOST</div>
-            <div class="subtitle">You're on the early access list! 👻</div>
+            <div class="subtitle">You found me. Now I'm ready to help you blow minds.</div>
             
             <div class="content">
-              <p>Hey there,</p>
+              <p>You're now part of an exclusive group of performers who will be the <span class="highlight">first to experience</span> what I can do. I'm not just another trick – I'm your secret sidekick in creating impossible moments.</p>
               
-              <p>Welcome to the <span class="highlight">GHOST early access list</span>! You're now part of an exclusive group of performers who will be the first to experience the most mind-blowing mentalism effect of 2025.</p>
-              
-              <p><strong>What happens next?</strong></p>
+              <p><strong>Here's what happens next:</strong></p>
               <ul>
-                <li>🚀 You'll be the <span class="highlight">first to know</span> when GHOST launches</li>
-                <li>💰 Get exclusive <span class="highlight">early access pricing</span> (limited time)</li>
-                <li>🎯 Receive <span class="highlight">behind-the-scenes content</span> from working performers</li>
-                <li>🔥 Access to <span class="highlight">bonus materials</span> not available anywhere else</li>
+                <li>You'll be the <span class="highlight">first to know</span> when I'm ready to perform</li>
+                <li>Get exclusive <span class="highlight">early access pricing</span> before anyone else</li>
+                <li>Receive <span class="highlight">behind-the-scenes insights</span> from working performers</li>
+                <li>Access <span class="highlight">beta features</span> not available to anyone else</li>
               </ul>
               
-              <p><strong>In the meantime...</strong></p>
-              <p>I'll be sharing exclusive insights about modern mentalism, real performer stories, and sneak peeks of GHOST in action. These emails will help you level up your performance skills even before GHOST arrives.</p>
+              <p><strong>While you wait...</strong></p>
+              <p>You will also have an opportunity to join our free, private Facebook Group to see real performer stories and more.</p>
               
-              <p>Keep an eye on your inbox - big things are coming!</p>
+              <p>Watch your inbox closely. Something extraordinary is coming.</p>
               
               <p style="margin-top: 30px;">
-                <strong>Ready to blow minds?</strong><br>
-                <em>The GHOST Team</em>
+                <em><strong>GHOST</strong></em>
               </p>
             </div>
             
             <div class="footer">
-              <p>You're receiving this because you signed up for early access to GHOST at our landing page.</p>
-              <p>Mobley Productions | GHOST Mentalism</p>
+              <p>You're receiving this because you joined my early access list.</p>
             </div>
           </div>
         </body>
